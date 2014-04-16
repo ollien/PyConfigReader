@@ -13,7 +13,7 @@ keys=reader.getKeys() #This will be a dictionary for you to read at your pleasur
 myConfigCode=keys['myKey']
 ```
 
-and an example of the config this would be reading
+and an example of the config.txt this would be reading
 
 ```
 #Just a simple example key
