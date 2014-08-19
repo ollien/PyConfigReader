@@ -14,10 +14,10 @@ class ConfigReader():
 				item=item[:-1]
 			#If a commented line
 			if (item[0]=='#'):
-				pass
+				continue
 			#If a new line is the first char
 			elif (item[0]=='\n'):
-				pass
+				continue
 			else:
 				#Get Position of equal sign
 				pos=item.index('=')
