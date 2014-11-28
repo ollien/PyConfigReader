@@ -1,7 +1,7 @@
 class ConfigReader():
-	
 	def __init__(self):
 		self.keys={}
+		
 	#Read Keys from file
 	def readKeys(self):
 		keysFile=open("config.txt","r")
@@ -24,7 +24,9 @@ class ConfigReader():
 				#Name of the key is [0:pos], Value of the key is [pos+1:-1] (Stripping the \n char at the end)
 				self.keys[item[0:pos]]=item[pos+1:]
 					
-	#Return the keys
-	def getKeys(self):
-		return self.keys
+	#Return the keys, read allows you to get the keys without re-reading the file.
+	def getKeys(self,read=True):
+		if read:
+			self.readKeys()
+		return self.keysFile
 			
